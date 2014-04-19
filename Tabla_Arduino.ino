@@ -89,6 +89,12 @@ void x_2() {
 }
 
 void x_3() {
+  if (mutex) {
+    return;
+  }
+  
+  mutex = true;
+
   Serial.write("X --> 3\n");
 }
 
@@ -127,6 +133,12 @@ void x_10() {
 }
 
 void x_11() {
+  if (mutex) {
+    return;
+  }
+  
+  mutex = true;
+ 
   Serial.write("X --> 11\n");
 }
 
@@ -165,6 +177,12 @@ void x_18() {
 }
 
 void x_19() {
+  if (mutex) {
+    return;
+  }
+  
+  mutex = true;
+
   Serial.write("X --> 19\n");
 }
 
@@ -203,6 +221,12 @@ void x_26() {
 }
 
 void x_27() {
+  if (mutex) {
+    return;
+  }
+  
+  mutex = true;
+
   Serial.write("X --> 27\n");
 }
 
@@ -242,26 +266,38 @@ void setup()
   //   attachInterrupt(x[i], test, CHANGE);
   // }
 
-    pinMode(x[0], INPUT);
+    pinMode(x[0], INPUT_PULLUP);
     digitalWrite(x[0], true);
-    attachInterrupt(x[0], x_0, CHANGE);
+    attachInterrupt(x[0], x_0, FALLING);
+    
+    pinMode(x[3], INPUT);
+    digitalWrite(x[3], true);
+    attachInterrupt(x[3], x_3, CHANGE);
 
-    pinMode(x[7], INPUT);
+    pinMode(x[7], INPUT_PULLUP);
     digitalWrite(x[7], true);
-    attachInterrupt(x[7], x_7, CHANGE);
+    attachInterrupt(x[7], x_7, FALLING);
+    
+    pinMode(x[11], INPUT_PULLUP);
+    digitalWrite(x[11], true);
+    attachInterrupt(x[11], x_11, FALLING);
 
-    pinMode(x[15], INPUT);
+    pinMode(x[15], INPUT_PULLUP);
     digitalWrite(x[15], true);
-    attachInterrupt(x[15], x_15, CHANGE);
+    attachInterrupt(x[15], x_15, FALLING);
+    
+    pinMode(x[19], INPUT_PULLUP);
+    digitalWrite(x[19], true);
+    attachInterrupt(x[19], x_19, FALLING);
 
-    pinMode(x[23], INPUT);
+    pinMode(x[23], INPUT_PULLUP);
     digitalWrite(x[23], true);
-    attachInterrupt(x[23], x_23, CHANGE);
+    attachInterrupt(x[23], x_23, FALLING);
 
   Serial.println("setting up y");
 
   // Rows
-  for (int j = 0; j <= (sizeof(y)/sizeof(int)); j+=8) {
+  for (int j = 0; j <= (sizeof(y)/sizeof(int)); j++) {
     delay(250);
     Serial.println(y[j]);
     
@@ -270,6 +306,10 @@ void setup()
     pinMode(y[j], OUTPUT);
     digitalWrite(y[j], false);
   }
+  
+  for (int j = 0; j <= (sizeof(y)/sizeof(int)); j++) {
+    
+  }
 }
 
 void loop() {
@@ -277,6 +317,7 @@ void loop() {
   
   mutex = false;
 }
+
 
 
 
