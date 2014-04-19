@@ -74,33 +74,69 @@ void x_0() {
   if (mutex) {
     return;
   }
-  
+
   mutex = true;
 
   Serial.write("X --> 0\n");
 }
 
 void x_1() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 1\n");
 }
 
 void x_2() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 2\n");
 }
 
 void x_3() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 3\n");
 }
 
 void x_4() {
+  if (mutex) {
+    return;
+  }
+  
+  mutex = true;
+
   Serial.write("X --> 4\n");
 }
 
 void x_5() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 5\n");
 }
 
 void x_6() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 6\n");
 }
 
@@ -115,30 +151,72 @@ void x_7() {
 }
 
 void x_8() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 8\n");
 }
 
 void x_9() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 9\n");
 }
 
 void x_10() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 10\n");
 }
 
 void x_11() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 11\n");
 }
 
 void x_12() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 12\n");
 }
 
 void x_13() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 13\n");
 }
 
 void x_14() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 14\n");
 }
 
@@ -153,30 +231,72 @@ void x_15() {
 }
 
 void x_16() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 16\n");
 }
 
 void x_17() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 17\n");
 }
 
 void x_18() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 18\n");
 }
 
 void x_19() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 19\n");
 }
 
 void x_20() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 20\n");
 }
 
 void x_21() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 21\n");
 }
 
 void x_22() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 22\n");
 }
 
@@ -191,39 +311,83 @@ void x_23() {
 }
 
 void x_24() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 24\n");
 }
 
 void x_25() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 25\n");
 }
 
 void x_26() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 26\n");
 }
 
 void x_27() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 27\n");
 }
 
 void x_28() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 28\n");
 }
 
 void x_29() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 29\n");
 }
 
 void x_30() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 30\n");
 }
 
  void x_31() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
    Serial.write("X --> 31\n");
- }
- 
- void test() {
-   Serial.println("hit");
  }
 
 void setup()
@@ -246,17 +410,33 @@ void setup()
     digitalWrite(x[0], true);
     attachInterrupt(x[0], x_0, CHANGE);
 
+    pinMode(x[3], INPUT);
+    digitalWrite(x[3], true);
+    attachInterrupt(x[3], x_3, CHANGE);
+
     pinMode(x[7], INPUT);
     digitalWrite(x[7], true);
     attachInterrupt(x[7], x_7, CHANGE);
+
+    pinMode(x[11], INPUT);
+    digitalWrite(x[11], true);
+    attachInterrupt(x[11], x_11, CHANGE);
 
     pinMode(x[15], INPUT);
     digitalWrite(x[15], true);
     attachInterrupt(x[15], x_15, CHANGE);
 
+    pinMode(x[19], INPUT);
+    digitalWrite(x[19], true);
+    attachInterrupt(x[19], x_19, CHANGE);
+
     pinMode(x[23], INPUT);
     digitalWrite(x[23], true);
     attachInterrupt(x[23], x_23, CHANGE);
+
+    pinMode(x[27], INPUT);
+    digitalWrite(x[27], true);
+    attachInterrupt(x[27], x_27, CHANGE);
 
   Serial.println("setting up y");
 
