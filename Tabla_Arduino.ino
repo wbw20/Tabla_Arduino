@@ -81,10 +81,22 @@ void x_0() {
 }
 
 void x_1() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 1\n");
 }
 
 void x_2() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 2\n");
 }
 
@@ -99,14 +111,32 @@ void x_3() {
 }
 
 void x_4() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 4\n");
 }
 
 void x_5() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 5\n");
 }
 
 void x_6() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 6\n");
 }
 
@@ -121,14 +151,32 @@ void x_7() {
 }
 
 void x_8() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 8\n");
 }
 
 void x_9() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 9\n");
 }
 
 void x_10() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 10\n");
 }
 
@@ -143,14 +191,32 @@ void x_11() {
 }
 
 void x_12() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 12\n");
 }
 
 void x_13() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 13\n");
 }
 
 void x_14() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 14\n");
 }
 
@@ -165,14 +231,32 @@ void x_15() {
 }
 
 void x_16() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 16\n");
 }
 
 void x_17() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 17\n");
 }
 
 void x_18() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 18\n");
 }
 
@@ -187,14 +271,32 @@ void x_19() {
 }
 
 void x_20() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 20\n");
 }
 
 void x_21() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 21\n");
 }
 
 void x_22() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 22\n");
 }
 
@@ -209,14 +311,32 @@ void x_23() {
 }
 
 void x_24() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 24\n");
 }
 
 void x_25() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 25\n");
 }
 
 void x_26() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 26\n");
 }
 
@@ -231,22 +351,52 @@ void x_27() {
 }
 
 void x_28() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 28\n");
 }
 
 void x_29() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 29\n");
 }
 
 void x_30() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
   Serial.write("X --> 30\n");
 }
 
  void x_31() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
    Serial.write("X --> 31\n");
  }
  
  void test() {
+  if (mutex) {
+    return;
+  }
+
+  mutex = true;
+
    Serial.println("hit");
  }
 
@@ -269,30 +419,110 @@ void setup()
     pinMode(x[0], INPUT_PULLUP);
     digitalWrite(x[0], true);
     attachInterrupt(x[0], x_0, FALLING);
-    
+
+    pinMode(x[1], INPUT_PULLUP);
+    digitalWrite(x[1], true);
+    attachInterrupt(x[1], x_1, FALLING);
+
+    pinMode(x[2], INPUT_PULLUP);
+    digitalWrite(x[2], true);
+    attachInterrupt(x[2], x_2, FALLING);
+
     pinMode(x[3], INPUT);
     digitalWrite(x[3], true);
-    attachInterrupt(x[3], x_3, CHANGE);
+    attachInterrupt(x[3], x_3, FALLING);
+
+    pinMode(x[4], INPUT_PULLUP);
+    digitalWrite(x[4], true);
+    attachInterrupt(x[4], x_4, FALLING);
+
+    pinMode(x[5], INPUT_PULLUP);
+    digitalWrite(x[5], true);
+    attachInterrupt(x[5], x_5, FALLING);
+
+    pinMode(x[6], INPUT_PULLUP);
+    digitalWrite(x[6], true);
+    attachInterrupt(x[6], x_6, FALLING);
 
     pinMode(x[7], INPUT_PULLUP);
     digitalWrite(x[7], true);
     attachInterrupt(x[7], x_7, FALLING);
+
+    pinMode(x[8], INPUT_PULLUP);
+    digitalWrite(x[8], true);
+    attachInterrupt(x[8], x_8, FALLING);
+
+    pinMode(x[9], INPUT_PULLUP);
+    digitalWrite(x[9], true);
+    attachInterrupt(x[9], x_9, FALLING);
+
+    pinMode(x[10], INPUT_PULLUP);
+    digitalWrite(x[10], true);
+    attachInterrupt(x[10], x_10, FALLING);
     
     pinMode(x[11], INPUT_PULLUP);
     digitalWrite(x[11], true);
     attachInterrupt(x[11], x_11, FALLING);
 
+    pinMode(x[12], INPUT_PULLUP);
+    digitalWrite(x[12], true);
+    attachInterrupt(x[12], x_12, FALLING);
+
+    pinMode(x[13], INPUT_PULLUP);
+    digitalWrite(x[13], true);
+    attachInterrupt(x[13], x_13, FALLING);
+
+    pinMode(x[14], INPUT_PULLUP);
+    digitalWrite(x[14], true);
+    attachInterrupt(x[14], x_14, FALLING);
+
     pinMode(x[15], INPUT_PULLUP);
     digitalWrite(x[15], true);
     attachInterrupt(x[15], x_15, FALLING);
-    
+
+    pinMode(x[16], INPUT_PULLUP);
+    digitalWrite(x[16], true);
+    attachInterrupt(x[16], x_16, FALLING);
+
+    pinMode(x[17], INPUT_PULLUP);
+    digitalWrite(x[17], true);
+    attachInterrupt(x[17], x_17, FALLING);
+
+    pinMode(x[18], INPUT_PULLUP);
+    digitalWrite(x[18], true);
+    attachInterrupt(x[18], x_18, FALLING);
+
     pinMode(x[19], INPUT_PULLUP);
     digitalWrite(x[19], true);
     attachInterrupt(x[19], x_19, FALLING);
 
+    pinMode(x[20], INPUT_PULLUP);
+    digitalWrite(x[20], true);
+    attachInterrupt(x[20], x_20, FALLING);
+
+    pinMode(x[21], INPUT_PULLUP);
+    digitalWrite(x[21], true);
+    attachInterrupt(x[21], x_21, FALLING);
+
+    pinMode(x[22], INPUT_PULLUP);
+    digitalWrite(x[22], true);
+    attachInterrupt(x[22], x_22, FALLING);
+
     pinMode(x[23], INPUT_PULLUP);
     digitalWrite(x[23], true);
     attachInterrupt(x[23], x_23, FALLING);
+
+    pinMode(x[24], INPUT_PULLUP);
+    digitalWrite(x[24], true);
+    attachInterrupt(x[24], x_24, FALLING);
+
+    pinMode(x[25], INPUT_PULLUP);
+    digitalWrite(x[25], true);
+    attachInterrupt(x[25], x_25, FALLING);
+
+    pinMode(x[26], INPUT_PULLUP);
+    digitalWrite(x[26], true);
+    attachInterrupt(x[26], x_26, FALLING);
 
   Serial.println("setting up y");
 
@@ -317,6 +547,7 @@ void loop() {
   
   mutex = false;
 }
+
 
 
 
