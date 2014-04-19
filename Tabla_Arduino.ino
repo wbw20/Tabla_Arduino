@@ -65,132 +65,158 @@
 int x[27] = {41, 39, 37, 35, 33, 31, 29, 27, 25, 23, 22, 21, 20, 19, 18, 17, 16, 15, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 int y[21] = {53, 51, 49, 47, 45, 43, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52};
 
+bool mutex = false;
+
 /*
  *  Vertical lines on the pad
  */
-// void x_0() {
-//   Serial.write("X --> 0\n");
-// }
+void x_0() {
+  if (mutex) {
+    return;
+  }
+  
+  mutex = true;
 
-// void x_1() {
-//   Serial.write("X --> 1\n");
-// }
+  Serial.write("X --> 0\n");
+}
 
-// void x_2() {
-//   Serial.write("X --> 2\n");
-// }
+void x_1() {
+  Serial.write("X --> 1\n");
+}
 
-// void x_3() {
-//   Serial.write("X --> 3\n");
-// }
+void x_2() {
+  Serial.write("X --> 2\n");
+}
 
-// void x_4() {
-//   Serial.write("X --> 4\n");
-// }
+void x_3() {
+  Serial.write("X --> 3\n");
+}
 
-// void x_5() {
-//   Serial.write("X --> 5\n");
-// }
+void x_4() {
+  Serial.write("X --> 4\n");
+}
 
-// void x_6() {
-//   Serial.write("X --> 6\n");
-// }
+void x_5() {
+  Serial.write("X --> 5\n");
+}
 
-// void x_7() {
-//   Serial.write("X --> 7\n");
-// }
+void x_6() {
+  Serial.write("X --> 6\n");
+}
 
-// void x_8() {
-//   Serial.write("X --> 8\n");
-// }
+void x_7() {
+  if (mutex) {
+    return;
+  }
+  
+  mutex = true;
 
-// void x_9() {
-//   Serial.write("X --> 9\n");
-// }
+  Serial.write("X --> 7\n");
+}
 
-// void x_10() {
-//   Serial.write("X --> 10\n");
-// }
+void x_8() {
+  Serial.write("X --> 8\n");
+}
 
-// void x_11() {
-//   Serial.write("X --> 11\n");
-// }
+void x_9() {
+  Serial.write("X --> 9\n");
+}
 
-// void x_12() {
-//   Serial.write("X --> 12\n");
-// }
+void x_10() {
+  Serial.write("X --> 10\n");
+}
 
-// void x_13() {
-//   Serial.write("X --> 13\n");
-// }
+void x_11() {
+  Serial.write("X --> 11\n");
+}
 
-// void x_14() {
-//   Serial.write("X --> 14\n");
-// }
+void x_12() {
+  Serial.write("X --> 12\n");
+}
 
-// void x_15() {
-//   Serial.write("X --> 15\n");
-// }
+void x_13() {
+  Serial.write("X --> 13\n");
+}
 
-// void x_16() {
-//   Serial.write("X --> 16\n");
-// }
+void x_14() {
+  Serial.write("X --> 14\n");
+}
 
-// void x_17() {
-//   Serial.write("X --> 17\n");
-// }
+void x_15() {
+  if (mutex) {
+    return;
+  }
+  
+  mutex = true;
 
-// void x_18() {
-//   Serial.write("X --> 18\n");
-// }
+  Serial.write("X --> 15\n");
+}
 
-// void x_19() {
-//   Serial.write("X --> 19\n");
-// }
+void x_16() {
+  Serial.write("X --> 16\n");
+}
 
-// void x_20() {
-//   Serial.write("X --> 20\n");
-// }
+void x_17() {
+  Serial.write("X --> 17\n");
+}
 
-// void x_21() {
-//   Serial.write("X --> 21\n");
-// }
+void x_18() {
+  Serial.write("X --> 18\n");
+}
 
-// void x_22() {
-//   Serial.write("X --> 22\n");
-// }
+void x_19() {
+  Serial.write("X --> 19\n");
+}
 
-// void x_23() {
-//   Serial.write("X --> 23\n");
-// }
+void x_20() {
+  Serial.write("X --> 20\n");
+}
 
-// void x_24() {
-//   Serial.write("X --> 24\n");
-// }
+void x_21() {
+  Serial.write("X --> 21\n");
+}
 
-// void x_25() {
-//   Serial.write("X --> 25\n");
-// }
+void x_22() {
+  Serial.write("X --> 22\n");
+}
 
-// void x_26() {
-//   Serial.write("X --> 26\n");
-// }
+void x_23() {
+  if (mutex) {
+    return;
+  }
+  
+  mutex = true;
 
-// void x_27() {
-//   Serial.write("X --> 27\n");
-// }
+  Serial.write("X --> 23\n");
+}
 
-// void x_28() {
-//   Serial.write("X --> 28\n");
-// }
+void x_24() {
+  Serial.write("X --> 24\n");
+}
 
-// void x_29() {
-//   Serial.write("X --> 29\n");
-// }
+void x_25() {
+  Serial.write("X --> 25\n");
+}
 
-// void x_30() {
-//   Serial.write("X --> 30\n");
-// }
+void x_26() {
+  Serial.write("X --> 26\n");
+}
+
+void x_27() {
+  Serial.write("X --> 27\n");
+}
+
+void x_28() {
+  Serial.write("X --> 28\n");
+}
+
+void x_29() {
+  Serial.write("X --> 29\n");
+}
+
+void x_30() {
+  Serial.write("X --> 30\n");
+}
 
  void x_31() {
    Serial.write("X --> 31\n");
@@ -204,17 +230,33 @@ void setup()
 {
   Serial.begin(9600);
   // Columns
-  for (int i = 0; i < (sizeof(x)/sizeof(int)); i+=8) {
-    delay(250);
+  // for (int i = 0; i < (sizeof(x)/sizeof(int)); i+=8) {
+  //   delay(250);
     
-    Serial.println(x[i]);
+  //   Serial.println(x[i]);
     
-    delay(250);
+  //   delay(250);
     
-    pinMode(x[i], INPUT_PULLUP);
-    digitalWrite(x[i], true);
-    attachInterrupt(x[i], test, CHANGE);
-  }
+  //   pinMode(x[i], INPUT_PULLUP);
+  //   digitalWrite(x[i], true);
+  //   attachInterrupt(x[i], test, CHANGE);
+  // }
+
+    pinMode(x[0], INPUT);
+    digitalWrite(x[0], true);
+    attachInterrupt(x[0], x_0, CHANGE);
+
+    pinMode(x[7], INPUT);
+    digitalWrite(x[7], true);
+    attachInterrupt(x[7], x_7, CHANGE);
+
+    pinMode(x[15], INPUT);
+    digitalWrite(x[15], true);
+    attachInterrupt(x[15], x_15, CHANGE);
+
+    pinMode(x[23], INPUT);
+    digitalWrite(x[23], true);
+    attachInterrupt(x[23], x_23, CHANGE);
 
   Serial.println("setting up y");
 
@@ -230,13 +272,11 @@ void setup()
   }
 }
 
-void loop()
-{
-//  int val = digitalRead(27);    // read the input pin
-//
-//  delay(40);
-
-//  Serial.println("test");
+void loop() {
+  delay(300);
+  
+  mutex = false;
 }
+
 
 
