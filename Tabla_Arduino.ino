@@ -441,7 +441,7 @@ void setup()
   Serial.println("setting up y");
 
   // Rows
-  for (int j = 0; j <= (sizeof(y)/sizeof(int)); j+=8) {
+  for (int j = 0; j <= (sizeof(y)/sizeof(int)); j+=4) {
     delay(250);
     Serial.println(y[j]);
     
