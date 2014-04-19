@@ -393,130 +393,118 @@ void x_30() {
 void setup()
 {
   Serial.begin(9600);
-  // Columns
-  // for (int i = 0; i < (sizeof(x)/sizeof(int)); i+=8) {
-  //   delay(250);
-    
-  //   Serial.println(x[i]);
-    
-  //   delay(250);
-    
-  //   pinMode(x[i], INPUT_PULLUP);
-  //   digitalWrite(x[i], true);
-  //   attachInterrupt(x[i], test, CHANGE);
-  // }
 
-    pinMode(x[0], INPUT);
-    digitalWrite(x[0], true);
-    attachInterrupt(x[0], x_0, CHANGE);
+  pinMode(x[0], INPUT);
+  digitalWrite(x[0], true);
+  attachInterrupt(x[0], x_0, CHANGE);
 
-    pinMode(x[1], INPUT);
-    digitalWrite(x[1], true);
-    attachInterrupt(x[1], x_1, CHANGE);
+  pinMode(x[1], INPUT);
+  digitalWrite(x[1], true);
+  attachInterrupt(x[1], x_1, CHANGE);
 
-    pinMode(x[2], INPUT);
-    digitalWrite(x[2], true);
-    attachInterrupt(x[2], x_2, CHANGE);
+  pinMode(x[2], INPUT);
+  digitalWrite(x[2], true);
+  attachInterrupt(x[2], x_2, CHANGE);
 
-    pinMode(x[3], INPUT);
-    digitalWrite(x[3], true);
-    attachInterrupt(x[3], x_3, CHANGE);
+  pinMode(x[3], INPUT);
+  digitalWrite(x[3], true);
+  attachInterrupt(x[3], x_3, CHANGE);
 
-    pinMode(x[4], INPUT);
-    digitalWrite(x[4], true);
-    attachInterrupt(x[4], x_4, CHANGE);
+  pinMode(x[4], INPUT);
+  digitalWrite(x[4], true);
+  attachInterrupt(x[4], x_4, CHANGE);
 
-    pinMode(x[5], INPUT);
-    digitalWrite(x[5], true);
-    attachInterrupt(x[5], x_5, CHANGE);
+  pinMode(x[5], INPUT);
+  digitalWrite(x[5], true);
+  attachInterrupt(x[5], x_5, CHANGE);
 
-    pinMode(x[6], INPUT);
-    digitalWrite(x[6], true);
-    attachInterrupt(x[6], x_6, CHANGE);
+  pinMode(x[6], INPUT);
+  digitalWrite(x[6], true);
+  attachInterrupt(x[6], x_6, CHANGE);
 
-    pinMode(x[7], INPUT);
-    digitalWrite(x[7], true);
-    attachInterrupt(x[7], x_7, CHANGE);
+  pinMode(x[7], INPUT);
+  digitalWrite(x[7], true);
+  attachInterrupt(x[7], x_7, CHANGE);
 
-    pinMode(x[8], INPUT);
-    digitalWrite(x[8], true);
-    attachInterrupt(x[8], x_8, CHANGE);
+  pinMode(x[8], INPUT);
+  digitalWrite(x[8], true);
+  attachInterrupt(x[8], x_8, CHANGE);
 
-    pinMode(x[9], INPUT);
-    digitalWrite(x[9], true);
-    attachInterrupt(x[9], x_9, CHANGE);
+  pinMode(x[9], INPUT);
+  digitalWrite(x[9], true);
+  attachInterrupt(x[9], x_9, CHANGE);
 
-    pinMode(x[10], INPUT);
-    digitalWrite(x[10], true);
-    attachInterrupt(x[10], x_10, CHANGE);
+  pinMode(x[10], INPUT);
+  digitalWrite(x[10], true);
+  attachInterrupt(x[10], x_10, CHANGE);
 
-    pinMode(x[11], INPUT);
-    digitalWrite(x[11], true);
-    attachInterrupt(x[11], x_11, CHANGE);
+  pinMode(x[11], INPUT);
+  digitalWrite(x[11], true);
+  attachInterrupt(x[11], x_11, CHANGE);
 
-    pinMode(x[12], INPUT);
-    digitalWrite(x[12], true);
-    attachInterrupt(x[12], x_12, CHANGE);
+  pinMode(x[12], INPUT);
+  digitalWrite(x[12], true);
+  attachInterrupt(x[12], x_12, CHANGE);
 
-    pinMode(x[13], INPUT);
-    digitalWrite(x[13], true);
-    attachInterrupt(x[13], x_13, CHANGE);
+  pinMode(x[13], INPUT);
+  digitalWrite(x[13], true);
+  attachInterrupt(x[13], x_13, CHANGE);
 
-    pinMode(x[14], INPUT);
-    digitalWrite(x[14], true);
-    attachInterrupt(x[14], x_14, CHANGE);
+  pinMode(x[14], INPUT);
+  digitalWrite(x[14], true);
+  attachInterrupt(x[14], x_14, CHANGE);
 
-    pinMode(x[15], INPUT);
-    digitalWrite(x[15], true);
-    attachInterrupt(x[15], x_15, CHANGE);
+  pinMode(x[15], INPUT);
+  digitalWrite(x[15], true);
+  attachInterrupt(x[15], x_15, CHANGE);
 
-    pinMode(x[16], INPUT);
-    digitalWrite(x[16], true);
-    attachInterrupt(x[16], x_16, CHANGE);
+  pinMode(x[16], INPUT);
+  digitalWrite(x[16], true);
+  attachInterrupt(x[16], x_16, CHANGE);
 
-    pinMode(x[17], INPUT);
-    digitalWrite(x[17], true);
-    attachInterrupt(x[17], x_17, CHANGE);
+  pinMode(x[17], INPUT);
+  digitalWrite(x[17], true);
+  attachInterrupt(x[17], x_17, CHANGE);
 
-    pinMode(x[18], INPUT);
-    digitalWrite(x[18], true);
-    attachInterrupt(x[18], x_18, CHANGE);
+  pinMode(x[18], INPUT);
+  digitalWrite(x[18], true);
+  attachInterrupt(x[18], x_18, CHANGE);
 
-    pinMode(x[19], INPUT);
-    digitalWrite(x[19], true);
-    attachInterrupt(x[19], x_19, CHANGE);
+  pinMode(x[19], INPUT);
+  digitalWrite(x[19], true);
+  attachInterrupt(x[19], x_19, CHANGE);
 
-    pinMode(x[20], INPUT);
-    digitalWrite(x[20], true);
-    attachInterrupt(x[20], x_20, CHANGE);
+  pinMode(x[20], INPUT);
+  digitalWrite(x[20], true);
+  attachInterrupt(x[20], x_20, CHANGE);
 
-    pinMode(x[21], INPUT);
-    digitalWrite(x[21], true);
-    attachInterrupt(x[21], x_21, CHANGE);
+  pinMode(x[21], INPUT);
+  digitalWrite(x[21], true);
+  attachInterrupt(x[21], x_21, CHANGE);
 
-    pinMode(x[22], INPUT);
-    digitalWrite(x[22], true);
-    attachInterrupt(x[22], x_22, CHANGE);
+  pinMode(x[22], INPUT);
+  digitalWrite(x[22], true);
+  attachInterrupt(x[22], x_22, CHANGE);
 
-    pinMode(x[23], INPUT);
-    digitalWrite(x[23], true);
-    attachInterrupt(x[23], x_23, CHANGE);
+  pinMode(x[23], INPUT);
+  digitalWrite(x[23], true);
+  attachInterrupt(x[23], x_23, CHANGE);
 
-    pinMode(x[24], INPUT);
-    digitalWrite(x[24], true);
-    attachInterrupt(x[24], x_24, CHANGE);
+  pinMode(x[24], INPUT);
+  digitalWrite(x[24], true);
+  attachInterrupt(x[24], x_24, CHANGE);
 
-    pinMode(x[25], INPUT);
-    digitalWrite(x[25], true);
-    attachInterrupt(x[25], x_25, CHANGE);
+  pinMode(x[25], INPUT);
+  digitalWrite(x[25], true);
+  attachInterrupt(x[25], x_25, CHANGE);
 
-    pinMode(x[26], INPUT);
-    digitalWrite(x[26], true);
-    attachInterrupt(x[26], x_26, CHANGE);
+  pinMode(x[26], INPUT);
+  digitalWrite(x[26], true);
+  attachInterrupt(x[26], x_26, CHANGE);
 
-    pinMode(x[27], INPUT);
-    digitalWrite(x[27], true);
-    attachInterrupt(x[27], x_27, CHANGE);
+  pinMode(x[27], INPUT);
+  digitalWrite(x[27], true);
+  attachInterrupt(x[27], x_27, CHANGE);
 
   Serial.println("setting up y");
 
