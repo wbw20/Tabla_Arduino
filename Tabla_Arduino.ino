@@ -65,467 +65,477 @@
 int x[27] = {41, 39, 37, 35, 33, 31, 29, 27, 25, 23, 22, 21, 20, 19, 18, 17, 16, 15, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 int y[21] = {53, 51, 49, 47, 45, 43, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52};
 
-bool mutex = false;
+
+int MAX_READINGS = 30;
+int readings = 0;
+int total;
 
 /*
  *  Vertical lines on the pad
  */
 void x_0() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 0\n");
+  total += 0;
 }
 
 void x_1() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 1\n");
+  total += 1;
 }
 
 void x_2() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 2\n");
+  total += 2;
 }
 
 void x_3() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 3\n");
+  total += 3;
 }
 
 void x_4() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
-  
-  mutex = true;
 
-  Serial.write("X --> 4\n");
+  readings++;
+
+  total += 4;
 }
 
 void x_5() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 5\n");
+  total += 5;
 }
 
 void x_6() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 6\n");
+  total += 6;
 }
 
 void x_7() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
-  
-  mutex = true;
 
-  Serial.write("X --> 7\n");
+  readings++;
+
+  total += 7;
 }
 
 void x_8() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 8\n");
+  total += 8;
 }
 
 void x_9() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 9\n");
+  total += 9;
 }
 
 void x_10() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 10\n");
+  total += 10;
 }
 
 void x_11() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 11\n");
+  total += 11;
 }
 
 void x_12() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 12\n");
+  total += 12;
 }
 
 void x_13() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 13\n");
+  total += 13;
 }
 
 void x_14() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 14\n");
+  total += 14;
 }
 
 void x_15() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
-  
-  mutex = true;
 
-  Serial.write("X --> 15\n");
+  readings++;
+
+  total += 15;
 }
 
 void x_16() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 16\n");
+  total += 16;
 }
 
 void x_17() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 17\n");
+  total += 17;
 }
 
 void x_18() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 18\n");
+  total += 18;
 }
 
 void x_19() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 19\n");
+  total += 19;
 }
 
 void x_20() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 20\n");
+  total += 20;
 }
 
 void x_21() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 21\n");
+  total += 21;
 }
 
 void x_22() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 22\n");
+  total += 22;
 }
 
 void x_23() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
-  
-  mutex = true;
 
-  Serial.write("X --> 23\n");
+  readings++;
+
+  total += 23;
 }
 
 void x_24() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 24\n");
+  total += 24;
 }
 
 void x_25() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 25\n");
+  total += 25;
 }
 
 void x_26() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 26\n");
+  total += 26;
 }
 
 void x_27() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 27\n");
+  total += 27;
 }
 
 void x_28() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 28\n");
+  total += 28;
 }
 
 void x_29() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 29\n");
+  total += 29;
 }
 
 void x_30() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-  Serial.write("X --> 30\n");
+  total += 30;
 }
 
  void x_31() {
-  if (mutex) {
+  if (readings >= MAX_READINGS) {
     return;
   }
 
-  mutex = true;
+  readings++;
 
-   Serial.write("X --> 31\n");
- }
+  total += 31;
+}
 
 void setup()
 {
   Serial.begin(9600);
 
-  pinMode(x[0], INPUT);
+  pinMode(x[0], INPUT_PULLUP);
   digitalWrite(x[0], true);
   attachInterrupt(x[0], x_0, CHANGE);
 
-  pinMode(x[1], INPUT);
+  pinMode(x[1], INPUT_PULLUP);
   digitalWrite(x[1], true);
   attachInterrupt(x[1], x_1, CHANGE);
 
-  pinMode(x[2], INPUT);
+  pinMode(x[2], INPUT_PULLUP);
   digitalWrite(x[2], true);
   attachInterrupt(x[2], x_2, CHANGE);
 
-  pinMode(x[3], INPUT);
+  pinMode(x[3], INPUT_PULLUP);
   digitalWrite(x[3], true);
   attachInterrupt(x[3], x_3, CHANGE);
 
-  pinMode(x[4], INPUT);
+  pinMode(x[4], INPUT_PULLUP);
   digitalWrite(x[4], true);
   attachInterrupt(x[4], x_4, CHANGE);
 
-  pinMode(x[5], INPUT);
+  pinMode(x[5], INPUT_PULLUP);
   digitalWrite(x[5], true);
   attachInterrupt(x[5], x_5, CHANGE);
 
-  pinMode(x[6], INPUT);
+  pinMode(x[6], INPUT_PULLUP);
   digitalWrite(x[6], true);
   attachInterrupt(x[6], x_6, CHANGE);
 
-  pinMode(x[7], INPUT);
+  pinMode(x[7], INPUT_PULLUP);
   digitalWrite(x[7], true);
   attachInterrupt(x[7], x_7, CHANGE);
 
-  pinMode(x[8], INPUT);
+  pinMode(x[8], INPUT_PULLUP);
   digitalWrite(x[8], true);
   attachInterrupt(x[8], x_8, CHANGE);
 
-  pinMode(x[9], INPUT);
+  pinMode(x[9], INPUT_PULLUP);
   digitalWrite(x[9], true);
   attachInterrupt(x[9], x_9, CHANGE);
 
-  pinMode(x[10], INPUT);
+  pinMode(x[10], INPUT_PULLUP);
   digitalWrite(x[10], true);
   attachInterrupt(x[10], x_10, CHANGE);
 
-  pinMode(x[11], INPUT);
+  pinMode(x[11], INPUT_PULLUP);
   digitalWrite(x[11], true);
   attachInterrupt(x[11], x_11, CHANGE);
 
-  pinMode(x[12], INPUT);
+  pinMode(x[12], INPUT_PULLUP);
   digitalWrite(x[12], true);
   attachInterrupt(x[12], x_12, CHANGE);
 
-  pinMode(x[13], INPUT);
+  pinMode(x[13], INPUT_PULLUP);
   digitalWrite(x[13], true);
   attachInterrupt(x[13], x_13, CHANGE);
 
-  pinMode(x[14], INPUT);
+  pinMode(x[14], INPUT_PULLUP);
   digitalWrite(x[14], true);
   attachInterrupt(x[14], x_14, CHANGE);
 
-  pinMode(x[15], INPUT);
+  pinMode(x[15], INPUT_PULLUP);
   digitalWrite(x[15], true);
   attachInterrupt(x[15], x_15, CHANGE);
 
-  pinMode(x[16], INPUT);
+  pinMode(x[16], INPUT_PULLUP);
   digitalWrite(x[16], true);
   attachInterrupt(x[16], x_16, CHANGE);
 
-  pinMode(x[17], INPUT);
+  pinMode(x[17], INPUT_PULLUP);
   digitalWrite(x[17], true);
   attachInterrupt(x[17], x_17, CHANGE);
 
-  pinMode(x[18], INPUT);
+  pinMode(x[18], INPUT_PULLUP);
   digitalWrite(x[18], true);
   attachInterrupt(x[18], x_18, CHANGE);
 
-  pinMode(x[19], INPUT);
+  pinMode(x[19], INPUT_PULLUP);
   digitalWrite(x[19], true);
   attachInterrupt(x[19], x_19, CHANGE);
 
-  pinMode(x[20], INPUT);
+  pinMode(x[20], INPUT_PULLUP);
   digitalWrite(x[20], true);
   attachInterrupt(x[20], x_20, CHANGE);
 
-  pinMode(x[21], INPUT);
+  pinMode(x[21], INPUT_PULLUP);
   digitalWrite(x[21], true);
   attachInterrupt(x[21], x_21, CHANGE);
 
-  pinMode(x[22], INPUT);
+  pinMode(x[22], INPUT_PULLUP);
   digitalWrite(x[22], true);
   attachInterrupt(x[22], x_22, CHANGE);
 
-  pinMode(x[23], INPUT);
+  pinMode(x[23], INPUT_PULLUP);
   digitalWrite(x[23], true);
   attachInterrupt(x[23], x_23, CHANGE);
 
-  pinMode(x[24], INPUT);
+  pinMode(x[24], INPUT_PULLUP);
   digitalWrite(x[24], true);
   attachInterrupt(x[24], x_24, CHANGE);
 
-  pinMode(x[25], INPUT);
+  pinMode(x[25], INPUT_PULLUP);
   digitalWrite(x[25], true);
   attachInterrupt(x[25], x_25, CHANGE);
 
-  pinMode(x[26], INPUT);
+  pinMode(x[26], INPUT_PULLUP);
   digitalWrite(x[26], true);
   attachInterrupt(x[26], x_26, CHANGE);
 
-  pinMode(x[27], INPUT);
+  pinMode(x[27], INPUT_PULLUP);
   digitalWrite(x[27], true);
   attachInterrupt(x[27], x_27, CHANGE);
 
   Serial.println("setting up y");
 
   // Rows
-  for (int j = 0; j <= (sizeof(y)/sizeof(int)); j+=8) {
+  for (int j = 0; j <= (sizeof(y)/sizeof(int)); j+=7) {
     delay(250);
     Serial.println(y[j]);
-    
+
     delay(250);
-    
+
     pinMode(y[j], OUTPUT);
     digitalWrite(y[j], false);
   }
 }
 
 void loop() {
-  delay(300);
-  
-  mutex = false;
-}
+  delay(150);
 
+  if (total > 0) {
+    Serial.println(total / readings);
+  }
+
+  delay(150);
+
+
+  total = 0;
+  readings = 0;
+}
 
 
 
