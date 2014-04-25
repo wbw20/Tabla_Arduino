@@ -8,7 +8,7 @@ y = [53, 51, 49, 47, 45, 43, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48,
 file.write("###############  Generated %s %s ###############\n\n\n"%(time.strftime("%d/%m/%Y"), time.strftime("%H:%M:%S")));
 
 for value in xrange(len(x)):
-  file.write("void x_%d {\n  Serial.write(\"[%d, 15]\n\");\n}\n\n"%(value, value))
+  file.write("void x_%d {\n  Serial.write(\"[%d, 15]\");\n}\n\n"%(value, value))
 
 file.close()
 
