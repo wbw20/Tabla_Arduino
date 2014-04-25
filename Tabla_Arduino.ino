@@ -77,7 +77,7 @@ void x_0() {
   
   mutex = true;
 
-  Serial.write("X --> 0\n");
+  Serial.write("[0, 15]\n");
 }
 
 void x_1() {
@@ -87,7 +87,7 @@ void x_1() {
 
   mutex = true;
 
-  Serial.write("X --> 1\n");
+  Serial.write("[1, 15]\n");
 }
 
 void x_2() {
@@ -97,7 +97,7 @@ void x_2() {
 
   mutex = true;
 
-  Serial.write("X --> 2\n");
+  Serial.write("[2, 15]\n");
 }
 
 void x_3() {
@@ -107,7 +107,7 @@ void x_3() {
   
   mutex = true;
 
-  Serial.write("X --> 3\n");
+  Serial.write("[3, 15]\n");
 }
 
 void x_4() {
@@ -117,7 +117,7 @@ void x_4() {
 
   mutex = true;
 
-  Serial.write("X --> 4\n");
+  Serial.write("[4, 15]\n");
 }
 
 void x_5() {
@@ -127,7 +127,7 @@ void x_5() {
 
   mutex = true;
 
-  Serial.write("X --> 5\n");
+  Serial.write("[5, 15]\n");
 }
 
 void x_6() {
@@ -137,7 +137,7 @@ void x_6() {
 
   mutex = true;
 
-  Serial.write("X --> 6\n");
+  Serial.write("[6, 15]\n");
 }
 
 void x_7() {
@@ -147,7 +147,7 @@ void x_7() {
   
   mutex = true;
 
-  Serial.write("X --> 7\n");
+  Serial.write("[7, 15]\n");
 }
 
 void x_8() {
@@ -157,7 +157,7 @@ void x_8() {
 
   mutex = true;
 
-  Serial.write("X --> 8\n");
+  Serial.write("[8, 15]\n");
 }
 
 void x_9() {
@@ -167,7 +167,7 @@ void x_9() {
 
   mutex = true;
 
-  Serial.write("X --> 9\n");
+  Serial.write("[9, 15]\n");
 }
 
 void x_10() {
@@ -177,7 +177,7 @@ void x_10() {
 
   mutex = true;
 
-  Serial.write("X --> 10\n");
+  Serial.write("[10, 15]\n");
 }
 
 void x_11() {
@@ -187,7 +187,7 @@ void x_11() {
   
   mutex = true;
  
-  Serial.write("X --> 11\n");
+  Serial.write("[11, 15]\n");
 }
 
 void x_12() {
