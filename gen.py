@@ -1,7 +1,11 @@
+import time
+
 file = open("output.txt", 'w+')
 
 x = [41, 39, 37, 35, 33, 31, 29, 27, 25, 23, 22, 21, 20, 19, 18, 17, 16, 15, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 y = [53, 51, 49, 47, 45, 43, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52]
+
+file.write("###############  Generated %s %s ###############\n\n\n"%(time.strftime("%d/%m/%Y"), time.strftime("%H:%M:%S")));
 
 for value in xrange(len(x)):
   file.write("void x_%d {\n  Serial.write(\"[%d, 15]\n\");\n}\n\n"%(value, value))
