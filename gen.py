@@ -1,13 +1,17 @@
 import time, itertools
 
-file = open("output.ino", 'w+')
+file = open("output/tabla.ino", 'w+')
 
 baudrate = 9600
+timeout = 10
+buffer_size = 256
 x = [41, 39, 37, 35, 33, 31, 29, 27, 25, 23, 22, 21, 20, 19, 18, 17, 16, 15, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 y = [53, 51, 49, 47, 45, 43, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52]
 
 file.write("/*      Generated %s %s      */\n\n\n"%(time.strftime("%d/%m/%Y"), time.strftime("%H:%M:%S")))
-file.write("float x_average = 0;\nfloat y_average = 0;\n\n")
+file.write("int x_average = 0;\nint y_average = 0;\n")
+file.write("int timeout = %d;\n"%timeout)
+file.write("char buffer[%d];\n\n"%buffer_size)
 # file.write("float x_variance = 0;\nfloat y_variance = 0;\n\n")
 
 file.write("int x[%d] = { "%len(x))
@@ -32,7 +36,16 @@ for value in xrange(len(y)):
   if value%2 == 0:
     file.write("void y_%d() {\n  update_y(%d);\n}\n\n"%(value, value))
 
-file.write("void setup() {\n  Serial.begin(%d);\n\n"%baudrate)
+file.write("void stop_pins() {\n")
+file.write("  noInterrupts();\n")
+file.write("  while(Serial.read() == -1) {\n")
+file.write("    Serial.println(7);\n")
+file.write("  }\n\n")
+file.write("  start_pins();\n")
+file.write("}\n\n")
+
+file.write("void start_pins() {\n")
+file.write("  interrupts();\n\n")
 
 for value in xrange(len(x)):
   if value%2 == 0:
@@ -46,12 +59,30 @@ for value in xrange(len(y)):
     file.write("  digitalWrite(y[%d], HIGH);\n"%value)
     file.write("  attachInterrupt(y[%d], y_%d, CHANGE);\n\n"%(value, value))
 
+file.write("}\n\n")
+file.write("void setup() {\n")
+file.write("  Serial.begin(%d);\n"%baudrate)
+file.write("  start_pins();\n")
+file.write("}\n\n")
+
 # for value in xrange(len(y)):
 #   file.write("  pinMode(y[%d], OUTPUT);\n"%value)
 #   file.write("  digitalWrite(y[%d], false);\n\n"%value)
 
-file.write("}\n\nvoid loop() {\n  delay(250);\n  String coordinate = sprintf(\"[%f, %f]\\n\", x_average, y_average);\n")
-file.write("  Serial.println(coordinate);\n\n  x_average = 0;\n}\n")
+file.write("void loop() {\n")
+file.write("  delay(250);\n\n")
+file.write("  if (Serial.read() == -1) {\n")
+file.write("    timeout--;\n")
+file.write("  } else {\n")
+file.write("    timeout = %d;\n"%timeout)
+file.write("  }\n\n")
+file.write("  if (timeout <= 0) {\n")
+file.write("    stop_pins();\n")
+file.write("  }\n\n")
+file.write("  sprintf(buffer, \"[%f, %f]\\n\", x_average, y_average);\n")
+file.write("  Serial.println(buffer);\n")
+file.write("  x_average = 0;\n")
+file.write("}\n")
 
 file.close()
 
